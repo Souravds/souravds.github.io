@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Style conference</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="icon" type="image/png" href="https://png.icons8.com/ios/1600/video-conference.png">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="css/style.min.css" rel="stylesheet">
+    <style>
+        ul li a {
+            /*background: #a9a9a9*/
+            /*padding: 1px;*/
+            margin-right: 3px;
+            text-decoration: none;
+            /*border-radius: 3px;*/
+            font-weight: 300;
+            font-family: 'Roboto';
+            /*            font-size: 14px;*/
+        }
+
+
+        @import "https://fonts.googleapis.com/css?family=Open+Sans|Oswald";
+        body {
+            font-family: "Open Sans", sans-serif;
+        }
+
+        .container {
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .header-main {
+            background: #FCFCFC;
+        }
+
+
+        .container {
+            position: relative;
+        }
+
+        .navigation-primary>ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        .navigation-primary>ul>li {
+            display: inline-block;
+        }
+
+        /*        megamenu nav bar*/
+
+        .navigation-primary>ul>li>a {
+            display: block;
+            color: #519cf8;
+            font-weight: 500;
+            padding: 15px 15px;
+            font-size: 12px;
+            text-transform: uppercase;
+            position: relative;
+            transition: all 0.3s ease-in-out;
+            text-decoration: none;
+            font-family: "Oswald", sans-serif;
+        }
+
+        .navigation-primary>ul>li:hover>.mega-menu,
+        .navigation-primary>ul>li:hover>.sub-menu {
+            visibility: visible;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .navigation-primary>ul>li:hover>a {
+            background: #519cf8;
+            color: #fff;
+        }
+
+        .navigation-primary>ul .mega-menu,
+        .navigation-primary>ul .sub-menu {
+            z-index: 9999;
+            padding: 0;
+            position: absolute;
+            background-image: url(https://digitalsynopsis.com/wp-content/uploads/2017/02/beautiful-color-gradients-backgrounds-018-cloudy-knoxville.png);
+            background-size: cover;
+            border-top: 3px solid #519cf8;
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 0.3s ease-in-out, opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+            transform: translateX(20%);
+        }
+
+        .navigation-primary>ul>li:last-child {
+            border: none;
+        }
+
+        .navigation-primary>ul .mega-menu>li a,
+        .navigation-primary>ul .sub-menu>li a {
+            display: block;
+            text-decoration: none;
+            font-size: 13px;
+            color: #858585;
+        }
+
+        .navigation-primary>ul .mega-menu>li>.sub-menu,
+        .navigation-primary>ul .sub-menu>li>.sub-menu {
+            background-image: url(https://digitalsynopsis.com/wp-content/uploads/2017/02/beautiful-color-gradients-backgrounds-018-cloudy-knoxville.png);
+            background-size: cover;
+        }
+
+        .navigation-primary>ul .mega-menu {
+            left: 0;
+            width: 100%;
+            padding: 15px 30px;
+        }
+
+        .navigation-primary>ul .mega-menu li {
+            display: inline-block;
+            position: relative;
+        }
+
+        .navigation-primary>ul .mega-menu li a {
+            padding: 5px 20px;
+            font-size: 13px;
+        }
+
+        .navigation-primary>ul .mega-menu li ul {
+            padding: 0;
+        }
+
+        .navigation-primary>ul .mega-menu li ul li {
+            display: block;
+        }
+
+        .navigation-primary>ul .mega-menu li ul li a {
+            color: #858585;
+            transition: all 0.5s ease-in-out;
+        }
+
+        .navigation-primary>ul .mega-menu li ul li:hover a {
+            background: #519cf8;
+            color: white;
+        }
+
+        .navigation-primary>ul .mega-menu>li {
+            margin-right: 30px;
+        }
+
+        .navigation-primary>ul .mega-menu>li>a {
+
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .navigation-primary>ul .sub-menu {
+            min-width: 200px;
+        }
+
+        .navigation-primary>ul .sub-menu li {
+            display: block;
+            position: relative;
+        }
+
+        .navigation-primary>ul .sub-menu li a {
+            padding: 10px 30px;
+            transition: all 0.5s ease-in-out;
+        }
+
+        .navigation-primary>ul .sub-menu li .sub-menu {
+            border-top: none;
+            left: 100%;
+            top: 0;
+        }
+
+        .navigation-primary>ul .sub-menu li:hover>.mega-menu,
+        .navigation-primary>ul .sub-menu li:hover>.sub-menu {
+            visibility: visible;
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .navigation-primary>ul .sub-menu li:hover>a {
+            content: "\f103";
+            background: #519cf8;
+            color: white;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 10% 0;
+        }
+
+        .hero h2 {
+            text-transform: uppercase;
+            font-size: 72px;
+            font-family: "Oswald", sans-serif;
+            color: #fff;
+        }
+
+        .hero p {
+            color: #a3a3a3;
+        }
+
+        #main-wrapper {
+            /*            background-color: #333;*/
+            position: fixed;
+            top: -49px;
+            height: 49px;
+            width: 100%;
+            border-bottom: .5px solid #81B7FA;
+            /*            border-radius: 5px;*/
+            /*            border-radius: 5px;*/
+            transition: top 0.3s;
+            /*            box-shadow: 2px 5px 10px;*/
+            z-index: 1;
+            /*            color: aliceblue;*/
+            background-color: #fff;
+
+        }
+
+        .form {
+            padding: 10px;
+            color: #fff;
+        }
+
+        .form label,
+        .form input,
+        textarea {
+            display: block;
+            /*            text-transform: uppercase;*/
+            font-size: 12px;
+            font-family: "Oswald", sans-serif;
+            border-radius: 5px;
+            color: #858585;
+            /*            color: #fff;*/
+        }
+
+        .mega-menu-inner>div {
+            /*            font-size: 12px;*/
+            font-family: "Oswald", sans-serif;
+            color: #fff;
+        }
+
+        .mega-menu-body {
+            display: block;
+            color: #858585;
+            padding: 15px 15px;
+            font-size: 12px;
+        }
+
+        .mega-body {
+            width: 20%;
+            height: 40%;
+            padding: 10px;
+            margin-top: 10px;
+            float: left;
+        }
+
+        .mega-body img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 15px;
+        }
+
+        .arrow {
+            border: 1px solid #519CF8;
+            opacity: .7;
+            border-width: 0 2px 2px 0;
+            display: inline-block;
+            margin-left: 5px;
+            margin-bottom: 2px;
+            padding: 2.2px;
+            transform: rotate(45deg);
+            transition: .2s;
+        }
+
+        .navigation-primary>ul>li>a:hover>.arrow {
+            border: 1px solid #333;
+            border-width: 2px 0 0 2px;
+
+        }
+
+        .nav-mega {
+            margin: -400px;
+            left: 0px;
+            margin-top: 4px;
+            width: 87%;
+            margin-left: 25px;
+            padding: 15px;
+            z-index: 9999;
+            position: absolute;
+            background-image: url(https://digitalsynopsis.com/wp-content/uploads/2017/02/beautiful-color-gradients-backgrounds-018-cloudy-knoxville.png);
+            background-size: cover;
+            border-top: .5px solid #519cf8;
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 0.3s ease-in-out, opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+            transform: translateX(20%);
+        }
+
+        .nv:hover>.nav-mega {
+            visibility: visible;
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!--Main Navigation-->
+    <header>
+        <div id="main-wrapper" class="header-main">
+            <div class="container">
+                <nav class="navigation-primary">
+                    <ul>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Mega Menu<i class="arrow down"></i></a>
+                            <ul class="mega-menu">
+                                <li><a href="">Lorem Ipsum.</a>
+
+                                    <ul class="mega-menu-inner">
+                                        <li><a href="">LINK</a></li>
+                                        <li><a href="">LINK</a></li>
+                                        <li><a href="">LINK</a></li>
+                                        <li><a href="">LINK</a></li>
+                                        <li><a href="">LINK</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="">Lorem Ipsum</a>
+
+                                    <ul class="mega-menu-inner">
+                                        <li><a href="">LINK</a></li>
+                                        <li><a href="">LINK</a></li>
+                                        <li><a href="">LINK</a></li>
+                                        <li><a href="">LINK</a></li>
+                                        <li><a href="">LINK</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="">Lorem Ipsum</a>
+
+                                    <ul class="mega-menu-inner">
+                                        <li><a href="">LINK</a></li>
+                                        <li><a href="">LINK</a></li>
+                                        <li><a href="">LINK</a></li>
+                                        <li><a href="">LINK</a></li>
+                                        <li><a href="">LINK</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="">Lorem Ipsum.</a>
+
+                                    <ul class="mega-menu-inner">
+                                        <li><a href="">LINK</a></li>
+                                        <li><a href="">LINK</a></li>
+                                        <li><a href="">LINK</a></li>
+                                        <li><a href="">LINK</a></li>
+                                        <li><a href="">LINK</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="">Lorem Ipsum</a>
+
+                                    <ul class="mega-menu-inner">
+                                        <li><a href="">LINK</a></li>
+                                        <li><a href="">LINK</a></li>
+                                        <li><a href="">LINK</a></li>
+                                        <li><a href="">LINK</a></li>
+                                        <li><a href="">LINK</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="">Lorem Ipsum</a>
+
+                                    <ul class="mega-menu-inner">
+                                        <li><a href="">LINK</a></li>
+                                        <li><a href="">LINK</a></li>
+                                        <li><a href="">LINK</a></li>
+                                        <li><a href="">LINK</a></li>
+                                        <li><a href="">LINK</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="">Blog</a></li>
+                        <!--
+                        
+                        
+                        
+                        
+                        
+                        
+-->
+                        <li><a href="">Mega Menu 2 <i class="arrow down"></i></a>
+                            <div class="mega-menu mega-menu-body">
+                                <div class="mega-body">
+                                    <img src="https://freepngimg.com/download/android/30965-6-android-file.png" alt="">
+                                    <h3>Android</h3>
+
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident assumenda cum error iusto veniam repellendus eligendi eum impedit voluptates vel.</p>
+                                </div>
+                                <div class="mega-body">
+                                    <img src="https://freepngimg.com/download/apple_logo/26986-5-apple-logo-hd.png" alt="">
+                                    <h3>Apple</h3>
+
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, maxime. Beatae maxime corrupti fugit officia commodi laudantium quisquam, consequuntur numquam.</p>
+                                </div>
+                                <div class="mega-body">
+                                    <img src="https://freepngimg.com/download/twitter/2-2-twitter-png-file.png" alt="">
+                                    <h3>Twitter</h3>
+
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas voluptatibus pariatur sequi dolores asperiores, placeat praesentium molestiae iste alias numquam.</p>
+                                </div>
+                                <div class="mega-body">
+                                    <img src="https://freepngimg.com/download/facebook/2-2-facebook-free-download-png.png" alt="">
+                                    <h3>Facebook</h3>
+
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, maxime. Beatae maxime corrupti fugit officia commodi laudantium quisquam, placeat praesentium molestiae iste alias numquam.</p>
+                                </div>
+                                <div class="mega-body">
+                                    <img src="https://freepngimg.com/download/skype/6-2-skype-png-pic.png" alt="">
+                                    <h3>Skype</h3>
+
+                                    <p>Lorem ipsum dolor sit amet, consectetur Illum, maxime. Beatae maxime corrupti fugit officia commodi laudantium quisquam, placeat praesentium molestiae iste alias numquam.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <!--
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+-->
+                        <li><a href="">Sub Menu <i class="arrow down"></i></a>
+                            <ul class="sub-menu">
+                                <li><a href="">Lorem ipsum.</a></li>
+                                <li><a href="">Lorem</a></li>
+                                <li><a href="">Submenus    &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;  >></a>
+                                    <ul class="sub-menu">
+                                        <li><a href="">LINK</a></li>
+                                        <li><a href="">LINK</a></li>
+                                        <li><a href="">Subemenus &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;>></a>
+                                            <ul class="sub-menu">
+                                                <li><a href="">LINK</a></li>
+                                                <li><a href="">LINK</a></li>
+                                                <li><a href="">LINK</a></li>
+                                                <li><a href="">LINK</a></li>
+                                                <li><a href="">LINK</a></li>
+                                                <li><a href="">LINK</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="">LINK</a></li>
+                                        <li><a href="">LINK</a></li>
+
+                                    </ul>
+                                </li>
+                                <li><a href="">LINK</a></li>
+                                <li><a href="">LINK</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="">Contact Us<i class="arrow down"></i></a>
+                            <div class="sub-menu">
+                                <div class="form">
+                                    <div>
+                                        <label for="Name">Name:</label>
+                                        <input style="width: 100%; background-color:aliceblue" type="text" placeholder="Enter Name...">
+                                    </div><br>
+                                    <div>
+                                        <label for="Name">Message:</label>
+                                        <textarea style="background-color:aliceblue " name="" id="" cols="30" rows="5" value="Comment here..."></textarea>
+                                    </div><br>
+                                    <input style="cursor: pointer; width: 94%;" class="btn btn-mdb-color btn-sm" type="submit" value="Send">
+                                </div>
+                            </div>
+                        </li>
+                        <li style="float: right;"><a href=""><i class="fa fa-search" aria-hidden="true"></i></a>
+                            <div class="sub-menu" style="border: none;">
+                                <input style="position: fixed; top:-44px; border-radius: 0px; right: 200px; margin:5px; background-color: aliceblue;" class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search" aria-label="Search">
+                            </div>
+                        </li>
+                    </ul>
+
+                </nav>
+            </div>
+        </div>
+
+
+
+        <!-- Navbar -->
+        <div class="navbar navbar-expand-lg navbar-light white scrolling-navbar bg-gray m-0 p-0">
+            <div class="container" style="position: relative; width: 100%; margin: 0 auto;">
+
+                <!-- Brand -->
+                <a class="navbar-brand waves-effect pl-2" href="index.html">
+                    <strong class="font-weight-bold text-monospace blue-text mr-2 p-2 z-depth-2 wow fadeIn" style="font-family:monospace;">STYLE CONFERENCE</strong>
+                </a>
+
+                <!-- Collapse -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Links -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                    <!-- Left -->
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link waves-effect" href="index.html">Home
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link waves-effect" href="speakers.html">Speakers</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link waves-effect" href="schedule.html">Schedule</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link waves-effect" href="venue.html">Venue</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link waves-effect" href="register.html">Register</a>
+                        </li>
+
+                        <li class="nav-item nv">
+                            <a class="nav-link waves-effect" href="#">Megamenu<i class="arrow down"></i></a>
+                            <div class="mega-menu-body nav-mega">
+                                <div class="mega-body">
+                                    <img src="https://freepngimg.com/download/android/30965-6-android-file.png" alt="">
+                                    <h3>Android</h3>
+
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident assumenda cum error iusto veniam repellendus eligendi eum impedit voluptates vel.</p>
+                                </div>
+                                <div class="mega-body">
+                                    <img src="https://freepngimg.com/download/apple_logo/26986-5-apple-logo-hd.png" alt="">
+                                    <h3>Apple</h3>
+
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, maxime. Beatae maxime corrupti fugit officia commodi laudantium quisquam, consequuntur numquam.</p>
+                                </div>
+                                <div class="mega-body">
+                                    <img src="https://freepngimg.com/download/twitter/2-2-twitter-png-file.png" alt="">
+                                    <h3>Twitter</h3>
+
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas voluptatibus pariatur sequi dolores asperiores, placeat praesentium molestiae iste alias numquam.</p>
+                                </div>
+                                <div class="mega-body">
+                                    <img src="https://freepngimg.com/download/facebook/2-2-facebook-free-download-png.png" alt="">
+                                    <h3>Facebook</h3>
+
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, maxime. Beatae maxime corrupti fugit officia commodi laudantium quisquam, placeat praesentium molestiae iste alias numquam.</p>
+                                </div>
+                                <div class="mega-body">
+                                    <img src="https://freepngimg.com/download/skype/6-2-skype-png-pic.png" alt="">
+                                    <h3>Skype</h3>
+
+                                    <p>Lorem ipsum dolor sit amet, consectetur Illum, maxime. Beatae maxime corrupti fugit officia commodi laudantium quisquam, placeat praesentium molestiae iste alias numquam.</p>
+                                </div>
+
+                            </div>
+                        </li>
+
+
+                    </ul>
+
+                    <!-- Right -->
+                    <!-- Search form -->
+                    <form class="form-inline md-form m-0 form-sm">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                        <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search" aria-label="Search">
+                    </form>
+                </div>
+
+            </div>
+        </div>
+        <!-- Navbar -->
+
+    </header>
+    <!--Main Navigation-->
+
+    <!--Main layout-->
+    <div class="pt-1">
+        <div class="container">
+
+            <!--Section: Jumbotron-->
+            <section class="card wow fadeIn" style="background-image: url(img/assets/gradient.jpg); background-repeat: no-repeat; background-size: cover;">
+
+                <!-- Content -->
+                <div class="card-body text-black text-center py-5 px-5 my-5">
+
+                    <h1 class="mb-4 wow fadeIn">
+                        <strong>Dedicated to the Craft of Building Websites</strong>
+                    </h1>
+
+                    <p class="mb-4 lead wow fadeIn ">
+                        Every year the brightest web designers and front-end developers descend on Chicago to discuss the latest technologies. Join us this August!
+                    </p>
+                    <a target="_blank" href="register.html" class="btn btn-outline-black btn-lg animated tada">Register Now
+                    </a>
+
+                </div>
+                <!-- Content -->
+            </section>
+            <!--Section: Jumbotron-->
+
+            <hr class="my-5">
+
+            <!--Section: Cards-->
+            <section class="text-center">
+
+                <!--Grid row-->
+                <div class="row mb-4 wow fadeIn">
+
+                    <!--Grid column-->
+                    <div class="col-lg-4 col-md-12 mb-4 animated bounceInLeft">
+
+                        <!-- Card Dark -->
+                        <div class="card">
+
+                            <!-- Card image -->
+                            <div class="view overlay">
+                                <img class="card-img-top" src="img/assets/home/speakers.jpg" alt="professional speaker">
+                                <a>
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+
+                            <!-- Card content -->
+                            <div class="card-body rounded-bottom">
+
+                                <!-- Title -->
+                                <h4 class="card-title">World-Class Speakers</h4>
+                                <hr class="hr-black">
+                                <!-- Text -->
+                                <p class="card-text mb-4">Joining us from all around the world are over twenty speakers, here to share their stories.</p>
+                                <!-- Link -->
+                                <a href="speaker.html" class="btn btn-mdb-color btn-md">View More</a>
+
+                            </div>
+
+                        </div>
+                        <!-- Card Dark -->
+
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-lg-4 col-md-6 mb-4 animated bounceInRight">
+
+                        <!-- Card Dark -->
+                        <div class="card card-cascade">
+
+                            <!-- Card image -->
+                            <div class="view overlay">
+                                <img class="card-img-top" src="img/assets/home/schedule.jpg" alt="Card image cap">
+                                <a>
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+
+                            <!-- Card content -->
+                            <div class="card-body rounded-bottom">
+
+                                <!-- Title -->
+                                <h4 class="card-title">Three Inspiring Days</h4>
+                                <hr class="hr-black">
+                                <!-- Text -->
+                                <p class="card-text mb-4">Enjoy three inspiring and action-packed days of talks, gatherings, and all-around good times.</p>
+                                <!-- Link -->
+                                <a href="speaker.html" class="btn btn-mdb-color btn-md">View More</a>
+
+                            </div>
+
+                        </div>
+                        <!-- Card Dark -->
+
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-lg-4 col-md-6 mb-4 animated bounceInLeft">
+
+                        <!-- Card Dark -->
+                        <div class="card">
+
+                            <!-- Card image -->
+                            <div class="view overlay">
+                                <img class="card-img-top" src="img/assets/home/venue.jpg" alt="Card image cap">
+                                <a>
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+
+                            <!-- Card content -->
+                            <div class="card-body rounded-bottom">
+
+                                <!-- Title -->
+                                <h4 class="card-title">The Chicago Theatre</h4>
+                                <hr class="hr-black">
+                                <!-- Text -->
+                                <p class="card-text mb-4">Some quick example text to build the card title and make up the bulk of the card's content.</p>
+                                <!-- Link -->
+                                <a href="speaker.html" class="btn btn-mdb-color btn-md">View More</a>
+
+                            </div>
+
+                        </div>
+                        <!-- Card Dark -->
+
+                    </div>
+                    <!--Grid column-->
+
+                </div>
+                <!--Grid row-->
+
+            </section>
+            <!--Section: Cards-->
+
+
+        </div>
+    </div>
+    <!--Main layout-->
+
+    <!--Footer-->
+    <footer class="page-footer text-center font-small mdb-color darken-2 mt-4 wow fadeIn">
+
+        <hr class="my-4">
+
+        <!-- Social icons -->
+        <div class="pb-4">
+            <a href="index.html"> Home |</a>
+
+            <a href="speakers.html"> Speakers |</a>
+
+            <a href="schedule.html"> Schedule |</a>
+
+            <a href="venue.html"> Venue |</a>
+
+            <a href="register.html"> Register</a>
+        </div>
+        <!-- Social icons -->
+
+        <!--Copyright-->
+        <div class="footer-copyright"> © 2018 Copyright:
+            <a href="index.html" target="_blank"> style conference </a>
+        </div>
+        <!--/.Copyright-->
+
+    </footer>
+    <!--/.Footer-->
+
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script src="js/mdb.min.js"></script>
+    <!-- Initializations -->
+    <script>
+        // Animations initialization
+        new WOW().init();
+
+        // When the user scrolls down 20px from the top of the document, slide down the navbar
+        window.onscroll = function() {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("main-wrapper").style.top = "0";
+            } else {
+                document.getElementById("main-wrapper").style.top = "-49px";
+            }
+        }
+
+    </script>
+</body>
+
+</html>

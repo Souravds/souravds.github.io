@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href='https://fonts.googleapis.com/css?family=Play' rel='stylesheet' type='text/css'>
+    <style>
+        body
+        
+        h3{
+            font-family: 'Play', sans-serif;
+        }
+            
+        
+        .cars {
+            /*            width: 19%;*/
+            /*            height: 100%;*/
+            background-color: #ccc;
+            /*            height: 100%;*/
+            /*            text-align: center;*/
+            /*            box-shadow: -2px -2px 10px;*/
+        }
+
+        .list {
+            margin: 0px;
+            padding: 10px 0px;
+        }
+
+        .list li {
+            display: inline-block;
+            list-style: none;
+            margin: 2px;
+            padding: 10px;
+            background: #fff;
+            cursor: pointer;
+
+            /*            background: #d5001c;*/
+        }
+
+        .list li a {
+            text-decoration: none;
+            color: #333;
+            opacity: .7;
+            font-weight: 750;
+        }
+
+        /*        Details of the cars      */
+
+        /*        car details     */
+
+        .pic {
+            /*            display: flex;*/
+            /*            justify-content: center;*/
+            width: 100%;
+            height: 100vh;
+        }
+
+        .view {
+            background-color: #fff;
+            width: 100%;
+            height: 25vh;
+            display: flex;
+            justify-content: space-around;
+            opacity: .8;
+            align-items: center;
+            box-shadow: 0px -10px 10px -9px #ccc;
+        }
+
+        .view div {
+            border-right: 1px solid #ccc;
+            /*            border-left:  1px solid #ccc;*/
+            padding-right: 60px;
+        }
+
+        .view div:last-child {
+            border-right: none;
+        }
+
+        .pic1 {
+            background-image: url('https://files3.porsche.com/filestore/image/multimedia/none/jdp-2016-modelseries-flyout-718-cayman/normal/9e78560c-99bd-11e6-9f1b-0019999cd470/porsche-normal.jpg');
+            background-size: cover;
+            /*            background-position: center;*/
+            background-repeat: no-repeat;
+        }
+
+        .pic2 {
+            background-image: url('https://files3.porsche.com/filestore/image/multimedia/none/e-performance-missione-flyout-background/normal/0bf18c6a-1d44-11e8-bbc5-0019999cd470/porsche-normal.jpg');
+            background-size: cover;
+            /*            background-position: center;*/
+            background-repeat: no-repeat;
+        }
+
+        .pic3 {
+            background-image: url('https://files2.porsche.com/filestore/image/multimedia/none/jdp-2016-modelseries-flyout-panamera/normal/648c1f8e-99bf-11e6-9f1b-0019999cd470/porsche-normal.jpg');
+            background-size: cover;
+            /*            background-position: center;*/
+            background-repeat: no-repeat;
+        }
+
+        .pic4 {
+            background-image: url('https://files1.porsche.com/filestore/image/multimedia/none/jdp-2016-modelseries-flyout-911carrera/normal/ba0ef143-99bd-11e6-9f1b-0019999cd470/porsche-normal.jpg');
+            background-size: cover;
+            /*            background-position: center;*/
+            background-repeat: no-repeat;
+        }
+
+        .pic {
+/*            position: relative;*/
+            width: 100%;
+            height: 65%;
+        }
+        
+        .pic{
+            position: relative;
+        }
+
+        .pic img {
+            position: absolute;
+/*
+            display: flex;
+            justify-content: center;
+            align-items: center;
+*/          z-index: 1;
+            bottom: -16.5%;
+            right: 16%;
+            /*            bottom: 90px;*/
+            width: 50%;
+
+        }
+
+        .list li {
+            display: flex;
+            /*                        justify-content: center;*/
+            align-items: center;
+            text-align: left;
+            /*            height: 30px;*/
+            margin: 0px;
+            padding: 20px;
+            /*            margin-bottom: 3px;*/
+            border-bottom: 1px solid #ccc;
+            transition: .3s;
+        }
+
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .megas {
+            margin: auto;
+            /*            padding: 6px;*/
+            width: 96vw;
+            height: 80vh;
+            position: relative;
+        }
+
+
+
+
+        .list li:hover {
+            background-color: #d5001c;
+        }
+
+        .list li:hover>a {
+            color: #fff;
+            opacity: 1;
+        }
+
+        .cars {
+            /*            position: relative;*/
+            width: 22%;
+            height: 99.6%;
+            z-index: 1;
+            background-color: #fff;
+            border: 1px solid #ccc;
+        }
+
+
+
+        .car {
+            border: 1px solid #e3e4e4;
+            /*            position: relative;*/
+            /*
+            display: flex;
+            flex-direction: column;
+*/
+            /*            margin: px;*/
+            
+            /*            height: 10%;*/
+            
+            position: absolute;
+            width: 78%;
+                                    height: 100%;
+            /*            margin-left: 120px;*/
+            /*            top: 0px;*/
+            bottom: 0px;
+            /*            left: 40px;*/
+            /*            right: 0px;*/
+            left: 22%;
+        }
+
+        #first_car {
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 0.3s ease-in-out, opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+            /*            transform: translateY(20%);*/
+        }
+
+
+
+        #first:hover>#first_car {
+            margin: 0px;
+            visibility: visible;
+            opacity: 1;
+            /*            transform: translateY(0);*/
+        }
+
+        #second_car {
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 0.3s ease-in-out, opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+            /*            transform: translateY(20%);*/
+        }
+
+
+
+        #second:hover>#second_car {
+            margin: 0px;
+            visibility: visible;
+            opacity: 1;
+            /*            transform: translateY(0);*/
+        }
+
+        #third_car {
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 0.3s ease-in-out, opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+            /*            transform: translateY(20%);*/
+        }
+
+
+
+        #third:hover>#third_car {
+            margin: 0px;
+            visibility: visible;
+            opacity: 1;
+            /*            transform: translateY(0);*/
+        }
+
+        #fourth_car {
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 0.3s ease-in-out, opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+            /*            transform: translateY(20%);*/
+        }
+
+
+
+        #fourth:hover>#fourth_car {
+            margin: 0px;
+            visibility: visible;
+            opacity: 1;
+            /*            transform: translateY(0);*/
+        }
+    </style>
+</head>
+
+<body>
+    <div class="megas">
+        <div class="cars">
+            <ul class="list">
+                <li id="first"><a href="">712</a>
+                    <div id="first_car" class="car">
+                        <div class="pic pic1">
+                            <img src="https://files2.porsche.com/filestore/image/multimedia/none/jdp-2016-982-718-c7-modelimage-sideshot/model/d3b4f827-3356-11e8-bbc5-0019999cd470/porsche-model.png" alt="">
+                        </div>
+                        <div class="view">
+                            <div>
+                                <h3>From $ 56,900.00*</h3>
+                                <p>MSRP</p>
+                            </div>
+                            <div>
+                                <h3>300 hp</h3>
+                                <p>Max. power</p>
+                            </div>
+                            <div>
+                                <h3>4.9 s</h3>
+                                <p>0 - 60 mph</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li id="second"><a href="">911</a>
+                    <div id="second_car" class="car">
+                        <div class="pic pic2">
+                            <img src="https://files1.porsche.com/filestore/image/multimedia/none/e-performance-missione-modelimage-sideshot/model/90d63f92-1d44-11e8-bbc5-0019999cd470/porsche-model.png" alt="">
+                        </div>
+                        <div class="view">
+                            <div>
+                                <h3>&lt; 600 hp</h3>
+                                <p>Max. power</p>
+                            </div>
+                            <div>
+                                <h3> &gt; 3.5s </h3>
+                                <p>0 - 60 mphr</p>
+                            </div>
+                            <div>
+                                <h3>8.9 s</h3>
+                                <p>0 - 220 mph</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li id="third"><a href="">714</a>
+                    <div id="third_car" class="car">
+                        <div class="pic pic3">
+                            <img src="https://files1.porsche.com/filestore/image/multimedia/none/jdp-2016-970-g2-v6-modelimage-sideshot/model/b110a360-a6a7-11e6-be88-0019999cd470/porsche-model.png" alt="">
+                        </div>
+                        <div class="view">
+                            <div>
+                                <h3>&lt; 400 hp</h3>
+                                <p>Max. power</p>
+                            </div>
+                            <div>
+                                <h3> &gt; 7.5s </h3>
+                                <p>0 - 80 mphr</p>
+                            </div>
+                            <div>
+                                <h3>12.9 s</h3>
+                                <p>0 - 220 mph</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li id="fourth"><a href="">715</a>
+                    <div id="fourth_car" class="car">
+                        <div class="pic pic4">
+                            <img src="https://files3.porsche.com/filestore/image/multimedia/none/jdp-2016-991-2nd-c2-modelimage-sideshot/model/9eb1b6f4-946c-11e6-9f1b-0019999cd470/porsche-model.png" alt="">
+                        </div>
+                        <div class="view">
+                            <div>
+                                <h3>&lt; 450 hp</h3>
+                                <p>Max. power</p>
+                            </div>
+                            <div>
+                                <h3> &gt; 7.5s </h3>
+                                <p>0 - 120 mphr</p>
+                            </div>
+                            <div>
+                                <h3>4.9 s</h3>
+                                <p>0 - 140 mph</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--
+    <script>
+        function myFunction() {
+            document.getElementById("first_car").style.display = "block";
+        }
+    </script>
+-->
+
+</body>
+</html>
